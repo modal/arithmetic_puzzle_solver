@@ -2,7 +2,7 @@ from __future__ import division
 import sys
 from itertools import permutations, product
 """
-Brute Force A Solver for Blog Post
+Brute Force Solver for Blog Post
 a simple but difficult arithmetic puzzle
 http://blog.plover.com/math/17-puzzle.html
 """
