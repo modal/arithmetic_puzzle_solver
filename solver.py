@@ -23,14 +23,14 @@ def mul(x, y):
     """*"""
     return x * y
 ##############################################################################
-def solver(seq=[2,5,6,6], ops=[add, sub, div, mul]):
+def solver(seq=[2,5,6,6], ops=[add, sub, div, mul], target=17):
     cnt=0
     for x, y, w, z in permutations(seq):
         ops_pm = product(ops, repeat=3)
         for op1, op2, op3 in ops_pm:
             cnt+=1
             sol = op3(op2(op1(x, y), w), z)
-            if sol == 17:
+            if sol == target:
                 print sol, "=", x, op1.__doc__, y, op2.__doc__, w, op3.__doc__, z
     print "$$$$$$$$$$$$$$$$$$$$$", cnt
 
